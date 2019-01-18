@@ -1,0 +1,873 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7244D41CD62CFE8854C22A08 /* Pods_Smart_Postbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90420F2FE0678A8FB398FA9B /* Pods_Smart_Postbox.framework */; };
+		841F5C5F21EF39CE00224CE4 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F5C5E21EF39CE00224CE4 /* UserPreferences.swift */; };
+		842F90A021B17A0000CA76E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842F909F21B179FF00CA76E3 /* GoogleService-Info.plist */; };
+		842F90A321B182CE00CA76E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F90A221B182CE00CA76E3 /* User.swift */; };
+		842F90A521B185B300CA76E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F90A421B185B300CA76E3 /* SignUpViewController.swift */; };
+		84459C9921F0B2EC00A64E59 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459C9821F0B2EC00A64E59 /* PreferencesViewController.swift */; };
+		84546C0321B33CE6002954FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84546C0221B33CE6002954FC /* HomeViewController.swift */; };
+		846A4DF121E22F96007A8FF7 /* FilterCam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A4DF021E22F96007A8FF7 /* FilterCam.swift */; };
+		84A2A1C2218C87550099DB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1C1218C87550099DB83 /* AppDelegate.swift */; };
+		84A2A1C4218C87550099DB83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1C3218C87550099DB83 /* LoginViewController.swift */; };
+		84A2A1C7218C87550099DB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A2A1C5218C87550099DB83 /* Main.storyboard */; };
+		84A2A1CA218C87550099DB83 /* Smart_Postbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1C8218C87550099DB83 /* Smart_Postbox.xcdatamodeld */; };
+		84A2A1CC218C87570099DB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A2A1CB218C87570099DB83 /* Assets.xcassets */; };
+		84A2A1CF218C87570099DB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A2A1CD218C87570099DB83 /* LaunchScreen.storyboard */; };
+		84A2A1DA218C87570099DB83 /* Smart_PostboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1D9218C87570099DB83 /* Smart_PostboxTests.swift */; };
+		84A2A1E5218C87570099DB83 /* Smart_PostboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1E4218C87570099DB83 /* Smart_PostboxUITests.swift */; };
+		84A2A1F5218C92840099DB83 /* UserMailListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1F4218C92840099DB83 /* UserMailListTableViewController.swift */; };
+		84A2A1F7218C92C20099DB83 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1F6218C92C20099DB83 /* CameraViewController.swift */; };
+		84C639F821B4041A00DB89FE /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C639F721B4041A00DB89FE /* Mail.swift */; };
+		A2E1F1EF25C7570BAEB666CE /* Pods_Smart_PostboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD724A32DF35489B53A3784 /* Pods_Smart_PostboxTests.framework */; };
+		F27A6BE3B5E0C6168BD21071 /* Pods_Smart_PostboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20BABB0C2BA292208D7CD7D7 /* Pods_Smart_PostboxUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84A2A1D6218C87570099DB83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84A2A1B6218C87550099DB83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84A2A1BD218C87550099DB83;
+			remoteInfo = "Smart Postbox";
+		};
+		84A2A1E1218C87570099DB83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84A2A1B6218C87550099DB83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84A2A1BD218C87550099DB83;
+			remoteInfo = "Smart Postbox";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		111FF018D4ECB44961A48C06 /* Pods-Smart PostboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart PostboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart PostboxUITests/Pods-Smart PostboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		20BABB0C2BA292208D7CD7D7 /* Pods_Smart_PostboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_PostboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6852E5E5CD62198327F535B0 /* Pods-Smart Postbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Postbox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox.debug.xcconfig"; sourceTree = "<group>"; };
+		841F5C5D21EE464B00224CE4 /* sendEmail_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sendEmail_bridge.h; sourceTree = "<group>"; };
+		841F5C5E21EF39CE00224CE4 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		842F909F21B179FF00CA76E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		842F90A221B182CE00CA76E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		842F90A421B185B300CA76E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		84459C9821F0B2EC00A64E59 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		84546C0221B33CE6002954FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		846A4DF021E22F96007A8FF7 /* FilterCam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCam.swift; sourceTree = "<group>"; };
+		84A2A1BE218C87550099DB83 /* Smart Postbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Postbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A2A1C1218C87550099DB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84A2A1C3218C87550099DB83 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84A2A1C6218C87550099DB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84A2A1C9218C87550099DB83 /* Smart_Postbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smart_Postbox.xcdatamodel; sourceTree = "<group>"; };
+		84A2A1CB218C87570099DB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84A2A1CE218C87570099DB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84A2A1D0218C87570099DB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A2A1D5218C87570099DB83 /* Smart PostboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart PostboxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A2A1D9218C87570099DB83 /* Smart_PostboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_PostboxTests.swift; sourceTree = "<group>"; };
+		84A2A1DB218C87570099DB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A2A1E0218C87570099DB83 /* Smart PostboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart PostboxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A2A1E4218C87570099DB83 /* Smart_PostboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_PostboxUITests.swift; sourceTree = "<group>"; };
+		84A2A1E6218C87570099DB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A2A1F4218C92840099DB83 /* UserMailListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMailListTableViewController.swift; sourceTree = "<group>"; };
+		84A2A1F6218C92C20099DB83 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		84C639F721B4041A00DB89FE /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
+		84C639F921B4096200DB89FE /* Smart Postbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smart Postbox.entitlements"; sourceTree = "<group>"; };
+		90420F2FE0678A8FB398FA9B /* Pods_Smart_Postbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Postbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BD724A32DF35489B53A3784 /* Pods_Smart_PostboxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_PostboxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A5EB5BBE854165D4E9CA64 /* Pods-Smart PostboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart PostboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart PostboxTests/Pods-Smart PostboxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8716058275910DE121E8194 /* Pods-Smart Postbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Postbox.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox.release.xcconfig"; sourceTree = "<group>"; };
+		D5E5D37989B4AC7F16C99482 /* Pods-Smart PostboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart PostboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smart PostboxUITests/Pods-Smart PostboxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F59879983A32373417C3FDB3 /* Pods-Smart PostboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart PostboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smart PostboxTests/Pods-Smart PostboxTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84A2A1BB218C87550099DB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7244D41CD62CFE8854C22A08 /* Pods_Smart_Postbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A2A1D2218C87570099DB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E1F1EF25C7570BAEB666CE /* Pods_Smart_PostboxTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A2A1DD218C87570099DB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27A6BE3B5E0C6168BD21071 /* Pods_Smart_PostboxUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30A207EEFEAE219597765682 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90420F2FE0678A8FB398FA9B /* Pods_Smart_Postbox.framework */,
+				9BD724A32DF35489B53A3784 /* Pods_Smart_PostboxTests.framework */,
+				20BABB0C2BA292208D7CD7D7 /* Pods_Smart_PostboxUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77E56C1A5ADAA4CE8F8C123E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6852E5E5CD62198327F535B0 /* Pods-Smart Postbox.debug.xcconfig */,
+				C8716058275910DE121E8194 /* Pods-Smart Postbox.release.xcconfig */,
+				B8A5EB5BBE854165D4E9CA64 /* Pods-Smart PostboxTests.debug.xcconfig */,
+				F59879983A32373417C3FDB3 /* Pods-Smart PostboxTests.release.xcconfig */,
+				111FF018D4ECB44961A48C06 /* Pods-Smart PostboxUITests.debug.xcconfig */,
+				D5E5D37989B4AC7F16C99482 /* Pods-Smart PostboxUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		842F90A121B182BD00CA76E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				842F90A221B182CE00CA76E3 /* User.swift */,
+				84C639F721B4041A00DB89FE /* Mail.swift */,
+				841F5C5E21EF39CE00224CE4 /* UserPreferences.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84A2A1B5218C87550099DB83 = {
+			isa = PBXGroup;
+			children = (
+				841F5C5D21EE464B00224CE4 /* sendEmail_bridge.h */,
+				84A2A1C0218C87550099DB83 /* Smart Postbox */,
+				84A2A1D8218C87570099DB83 /* Smart PostboxTests */,
+				84A2A1E3218C87570099DB83 /* Smart PostboxUITests */,
+				84A2A1BF218C87550099DB83 /* Products */,
+				77E56C1A5ADAA4CE8F8C123E /* Pods */,
+				30A207EEFEAE219597765682 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84A2A1BF218C87550099DB83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84A2A1BE218C87550099DB83 /* Smart Postbox.app */,
+				84A2A1D5218C87570099DB83 /* Smart PostboxTests.xctest */,
+				84A2A1E0218C87570099DB83 /* Smart PostboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84A2A1C0218C87550099DB83 /* Smart Postbox */ = {
+			isa = PBXGroup;
+			children = (
+				84C639F921B4096200DB89FE /* Smart Postbox.entitlements */,
+				842F90A121B182BD00CA76E3 /* Model */,
+				84A2A1F3218C92660099DB83 /* Controller */,
+				84A2A1C1218C87550099DB83 /* AppDelegate.swift */,
+				84A2A1C5218C87550099DB83 /* Main.storyboard */,
+				84A2A1CB218C87570099DB83 /* Assets.xcassets */,
+				84A2A1CD218C87570099DB83 /* LaunchScreen.storyboard */,
+				84A2A1D0218C87570099DB83 /* Info.plist */,
+				842F909F21B179FF00CA76E3 /* GoogleService-Info.plist */,
+				84A2A1C8218C87550099DB83 /* Smart_Postbox.xcdatamodeld */,
+			);
+			path = "Smart Postbox";
+			sourceTree = "<group>";
+		};
+		84A2A1D8218C87570099DB83 /* Smart PostboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				84A2A1D9218C87570099DB83 /* Smart_PostboxTests.swift */,
+				84A2A1DB218C87570099DB83 /* Info.plist */,
+			);
+			path = "Smart PostboxTests";
+			sourceTree = "<group>";
+		};
+		84A2A1E3218C87570099DB83 /* Smart PostboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84A2A1E4218C87570099DB83 /* Smart_PostboxUITests.swift */,
+				84A2A1E6218C87570099DB83 /* Info.plist */,
+			);
+			path = "Smart PostboxUITests";
+			sourceTree = "<group>";
+		};
+		84A2A1F3218C92660099DB83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84A2A1F6218C92C20099DB83 /* CameraViewController.swift */,
+				84A2A1C3218C87550099DB83 /* LoginViewController.swift */,
+				84A2A1F4218C92840099DB83 /* UserMailListTableViewController.swift */,
+				842F90A421B185B300CA76E3 /* SignUpViewController.swift */,
+				84546C0221B33CE6002954FC /* HomeViewController.swift */,
+				846A4DF021E22F96007A8FF7 /* FilterCam.swift */,
+				84459C9821F0B2EC00A64E59 /* PreferencesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84A2A1BD218C87550099DB83 /* Smart Postbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A2A1E9218C87570099DB83 /* Build configuration list for PBXNativeTarget "Smart Postbox" */;
+			buildPhases = (
+				BCADB41C05A04F26BFC05BCA /* [CP] Check Pods Manifest.lock */,
+				84A2A1BA218C87550099DB83 /* Sources */,
+				84A2A1BB218C87550099DB83 /* Frameworks */,
+				84A2A1BC218C87550099DB83 /* Resources */,
+				26D744E3A2A4C3B5744722D5 /* [CP] Embed Pods Frameworks */,
+				26608BE7A5B22965FCCF8A10 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smart Postbox";
+			productName = "Smart Postbox";
+			productReference = 84A2A1BE218C87550099DB83 /* Smart Postbox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84A2A1D4218C87570099DB83 /* Smart PostboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A2A1EC218C87570099DB83 /* Build configuration list for PBXNativeTarget "Smart PostboxTests" */;
+			buildPhases = (
+				8AF6947A0AD10AF0FF2C7C9E /* [CP] Check Pods Manifest.lock */,
+				84A2A1D1218C87570099DB83 /* Sources */,
+				84A2A1D2218C87570099DB83 /* Frameworks */,
+				84A2A1D3218C87570099DB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84A2A1D7218C87570099DB83 /* PBXTargetDependency */,
+			);
+			name = "Smart PostboxTests";
+			productName = "Smart PostboxTests";
+			productReference = 84A2A1D5218C87570099DB83 /* Smart PostboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84A2A1DF218C87570099DB83 /* Smart PostboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A2A1EF218C87570099DB83 /* Build configuration list for PBXNativeTarget "Smart PostboxUITests" */;
+			buildPhases = (
+				372932EDB2AA13FE4B57B449 /* [CP] Check Pods Manifest.lock */,
+				84A2A1DC218C87570099DB83 /* Sources */,
+				84A2A1DD218C87570099DB83 /* Frameworks */,
+				84A2A1DE218C87570099DB83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84A2A1E2218C87570099DB83 /* PBXTargetDependency */,
+			);
+			name = "Smart PostboxUITests";
+			productName = "Smart PostboxUITests";
+			productReference = 84A2A1E0218C87570099DB83 /* Smart PostboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84A2A1B6218C87550099DB83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Berkay Cesur";
+				TargetAttributes = {
+					84A2A1BD218C87550099DB83 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					84A2A1D4218C87570099DB83 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 84A2A1BD218C87550099DB83;
+					};
+					84A2A1DF218C87570099DB83 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 84A2A1BD218C87550099DB83;
+					};
+				};
+			};
+			buildConfigurationList = 84A2A1B9218C87550099DB83 /* Build configuration list for PBXProject "Smart Postbox" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84A2A1B5218C87550099DB83;
+			productRefGroup = 84A2A1BF218C87550099DB83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84A2A1BD218C87550099DB83 /* Smart Postbox */,
+				84A2A1D4218C87570099DB83 /* Smart PostboxTests */,
+				84A2A1DF218C87570099DB83 /* Smart PostboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84A2A1BC218C87550099DB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A2A1CF218C87570099DB83 /* LaunchScreen.storyboard in Resources */,
+				842F90A021B17A0000CA76E3 /* GoogleService-Info.plist in Resources */,
+				84A2A1CC218C87570099DB83 /* Assets.xcassets in Resources */,
+				84A2A1C7218C87550099DB83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A2A1D3218C87570099DB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A2A1DE218C87570099DB83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26608BE7A5B22965FCCF8A10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26D744E3A2A4C3B5744722D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		372932EDB2AA13FE4B57B449 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart PostboxUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AF6947A0AD10AF0FF2C7C9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart PostboxTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCADB41C05A04F26BFC05BCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Postbox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84A2A1BA218C87550099DB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C639F821B4041A00DB89FE /* Mail.swift in Sources */,
+				84A2A1CA218C87550099DB83 /* Smart_Postbox.xcdatamodeld in Sources */,
+				842F90A521B185B300CA76E3 /* SignUpViewController.swift in Sources */,
+				841F5C5F21EF39CE00224CE4 /* UserPreferences.swift in Sources */,
+				84A2A1F7218C92C20099DB83 /* CameraViewController.swift in Sources */,
+				84546C0321B33CE6002954FC /* HomeViewController.swift in Sources */,
+				842F90A321B182CE00CA76E3 /* User.swift in Sources */,
+				84459C9921F0B2EC00A64E59 /* PreferencesViewController.swift in Sources */,
+				846A4DF121E22F96007A8FF7 /* FilterCam.swift in Sources */,
+				84A2A1F5218C92840099DB83 /* UserMailListTableViewController.swift in Sources */,
+				84A2A1C4218C87550099DB83 /* LoginViewController.swift in Sources */,
+				84A2A1C2218C87550099DB83 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A2A1D1218C87570099DB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A2A1DA218C87570099DB83 /* Smart_PostboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A2A1DC218C87570099DB83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A2A1E5218C87570099DB83 /* Smart_PostboxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84A2A1D7218C87570099DB83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84A2A1BD218C87550099DB83 /* Smart Postbox */;
+			targetProxy = 84A2A1D6218C87570099DB83 /* PBXContainerItemProxy */;
+		};
+		84A2A1E2218C87570099DB83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84A2A1BD218C87550099DB83 /* Smart Postbox */;
+			targetProxy = 84A2A1E1218C87570099DB83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84A2A1C5218C87550099DB83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2A1C6218C87550099DB83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84A2A1CD218C87570099DB83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2A1CE218C87570099DB83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84A2A1E7218C87570099DB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84A2A1E8218C87570099DB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84A2A1EA218C87570099DB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6852E5E5CD62198327F535B0 /* Pods-Smart Postbox.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Smart Postbox/Smart Postbox.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7V6585Z38R;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"$(PODS_ROOT)/FirebaseUI/FirebaseAuthUI",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore\"",
+				);
+				INFOPLIST_FILE = "Smart Postbox/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bc.Smart-Postbox";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/sendEmail_bridge.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84A2A1EB218C87570099DB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8716058275910DE121E8194 /* Pods-Smart Postbox.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Smart Postbox/Smart Postbox.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7V6585Z38R;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"$(PODS_ROOT)/FirebaseUI/FirebaseAuthUI",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios\"",
+					"\"${PODS_ROOT}/Headers/Public/mailcore2-ios/MailCore\"",
+				);
+				INFOPLIST_FILE = "Smart Postbox/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bc.Smart-Postbox";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/sendEmail_bridge.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84A2A1ED218C87570099DB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8A5EB5BBE854165D4E9CA64 /* Pods-Smart PostboxTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Smart PostboxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bc.Smart-PostboxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Postbox.app/Smart Postbox";
+			};
+			name = Debug;
+		};
+		84A2A1EE218C87570099DB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F59879983A32373417C3FDB3 /* Pods-Smart PostboxTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Smart PostboxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bc.Smart-PostboxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Postbox.app/Smart Postbox";
+			};
+			name = Release;
+		};
+		84A2A1F0218C87570099DB83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111FF018D4ECB44961A48C06 /* Pods-Smart PostboxUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Smart PostboxUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bc.Smart-PostboxUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smart Postbox";
+			};
+			name = Debug;
+		};
+		84A2A1F1218C87570099DB83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E5D37989B4AC7F16C99482 /* Pods-Smart PostboxUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Smart PostboxUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bc.Smart-PostboxUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smart Postbox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84A2A1B9218C87550099DB83 /* Build configuration list for PBXProject "Smart Postbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A2A1E7218C87570099DB83 /* Debug */,
+				84A2A1E8218C87570099DB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A2A1E9218C87570099DB83 /* Build configuration list for PBXNativeTarget "Smart Postbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A2A1EA218C87570099DB83 /* Debug */,
+				84A2A1EB218C87570099DB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A2A1EC218C87570099DB83 /* Build configuration list for PBXNativeTarget "Smart PostboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A2A1ED218C87570099DB83 /* Debug */,
+				84A2A1EE218C87570099DB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A2A1EF218C87570099DB83 /* Build configuration list for PBXNativeTarget "Smart PostboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A2A1F0218C87570099DB83 /* Debug */,
+				84A2A1F1218C87570099DB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		84A2A1C8218C87550099DB83 /* Smart_Postbox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				84A2A1C9218C87550099DB83 /* Smart_Postbox.xcdatamodel */,
+			);
+			currentVersion = 84A2A1C9218C87550099DB83 /* Smart_Postbox.xcdatamodel */;
+			path = Smart_Postbox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 84A2A1B6218C87550099DB83 /* Project object */;
+}
