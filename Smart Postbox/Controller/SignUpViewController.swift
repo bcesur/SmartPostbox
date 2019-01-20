@@ -15,8 +15,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwdTextField: UITextField!
-    
-    //var user: User!
+   
     let ref = Database.database().reference(withPath: "users")
     
     override func viewDidLoad() {

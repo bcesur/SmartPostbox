@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7244D41CD62CFE8854C22A08 /* Pods_Smart_Postbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90420F2FE0678A8FB398FA9B /* Pods_Smart_Postbox.framework */; };
+		84112A5F21F38E750065492E /* DetailedMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84112A5E21F38E750065492E /* DetailedMailViewController.swift */; };
 		841F5C5F21EF39CE00224CE4 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F5C5E21EF39CE00224CE4 /* UserPreferences.swift */; };
 		842F90A021B17A0000CA76E3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842F909F21B179FF00CA76E3 /* GoogleService-Info.plist */; };
 		842F90A321B182CE00CA76E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F90A221B182CE00CA76E3 /* User.swift */; };
 		842F90A521B185B300CA76E3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F90A421B185B300CA76E3 /* SignUpViewController.swift */; };
 		84459C9921F0B2EC00A64E59 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84459C9821F0B2EC00A64E59 /* PreferencesViewController.swift */; };
 		84546C0321B33CE6002954FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84546C0221B33CE6002954FC /* HomeViewController.swift */; };
-		846A4DF121E22F96007A8FF7 /* FilterCam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A4DF021E22F96007A8FF7 /* FilterCam.swift */; };
 		84A2A1C2218C87550099DB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1C1218C87550099DB83 /* AppDelegate.swift */; };
 		84A2A1C4218C87550099DB83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2A1C3218C87550099DB83 /* LoginViewController.swift */; };
 		84A2A1C7218C87550099DB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A2A1C5218C87550099DB83 /* Main.storyboard */; };
@@ -51,6 +51,7 @@
 		111FF018D4ECB44961A48C06 /* Pods-Smart PostboxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart PostboxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart PostboxUITests/Pods-Smart PostboxUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		20BABB0C2BA292208D7CD7D7 /* Pods_Smart_PostboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_PostboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6852E5E5CD62198327F535B0 /* Pods-Smart Postbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Postbox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smart Postbox/Pods-Smart Postbox.debug.xcconfig"; sourceTree = "<group>"; };
+		84112A5E21F38E750065492E /* DetailedMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMailViewController.swift; sourceTree = "<group>"; };
 		841F5C5D21EE464B00224CE4 /* sendEmail_bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sendEmail_bridge.h; sourceTree = "<group>"; };
 		841F5C5E21EF39CE00224CE4 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		842F909F21B179FF00CA76E3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -58,7 +59,6 @@
 		842F90A421B185B300CA76E3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84459C9821F0B2EC00A64E59 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		84546C0221B33CE6002954FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		846A4DF021E22F96007A8FF7 /* FilterCam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCam.swift; sourceTree = "<group>"; };
 		84A2A1BE218C87550099DB83 /* Smart Postbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Postbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A2A1C1218C87550099DB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A2A1C3218C87550099DB83 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 				84A2A1F4218C92840099DB83 /* UserMailListTableViewController.swift */,
 				842F90A421B185B300CA76E3 /* SignUpViewController.swift */,
 				84546C0221B33CE6002954FC /* HomeViewController.swift */,
-				846A4DF021E22F96007A8FF7 /* FilterCam.swift */,
 				84459C9821F0B2EC00A64E59 /* PreferencesViewController.swift */,
+				84112A5E21F38E750065492E /* DetailedMailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -494,8 +494,8 @@
 				84A2A1F7218C92C20099DB83 /* CameraViewController.swift in Sources */,
 				84546C0321B33CE6002954FC /* HomeViewController.swift in Sources */,
 				842F90A321B182CE00CA76E3 /* User.swift in Sources */,
+				84112A5F21F38E750065492E /* DetailedMailViewController.swift in Sources */,
 				84459C9921F0B2EC00A64E59 /* PreferencesViewController.swift in Sources */,
-				846A4DF121E22F96007A8FF7 /* FilterCam.swift in Sources */,
 				84A2A1F5218C92840099DB83 /* UserMailListTableViewController.swift in Sources */,
 				84A2A1C4218C87550099DB83 /* LoginViewController.swift in Sources */,
 				84A2A1C2218C87550099DB83 /* AppDelegate.swift in Sources */,
@@ -674,7 +674,6 @@
 			baseConfigurationReference = 6852E5E5CD62198327F535B0 /* Pods-Smart Postbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Smart Postbox/Smart Postbox.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V6585Z38R;
 				HEADER_SEARCH_PATHS = (
@@ -706,7 +705,6 @@
 			baseConfigurationReference = C8716058275910DE121E8194 /* Pods-Smart Postbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Smart Postbox/Smart Postbox.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V6585Z38R;
 				HEADER_SEARCH_PATHS = (

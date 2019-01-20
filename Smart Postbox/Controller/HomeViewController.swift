@@ -13,9 +13,15 @@ import MessageUI
 
 class HomeViewController: UIViewController {
     
+    var user: User!
+    let ref = Database.database().reference(withPath: "users")
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Auth.auth().addStateDidChangeListener { auth, user in
+            guard let user = user else { return }
+            self.user = User(authData: user)
+        }
     }
     
     @IBAction func logOutToolbarButton(_ sender: Any) {
@@ -23,7 +29,7 @@ class HomeViewController: UIViewController {
             try Auth.auth().signOut()
             print("Sign out successful")
             self.dismiss(animated: true, completion: nil)
-        } catch (let error) {
+        } catch ( _) {
             print("Sign out failed")
         }
     }

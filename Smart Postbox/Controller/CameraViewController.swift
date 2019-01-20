@@ -27,10 +27,12 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     var isTakePhoto: Bool = false
     var luminosityArray: [Double] = []
-
+    
     let context = CIContext()
     
     var user: User!
+    var items: [UserPreferences] = []
+    let storage = Storage.storage()
     let db = Database.database()
     
     @IBOutlet weak var imagePicked: UIImageView!
@@ -54,11 +56,31 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         Auth.auth().addStateDidChangeListener { auth, user in
             guard let user = user else { return }
             self.user = User(authData: user)
+            self.db.reference(withPath: "users").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                self.user.name = value?["name"] as? String ?? ""
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            self.db.reference(withPath: "users").child(user.uid).child("preferences").observe(.value, with: { snapshot in
+                if snapshot.exists() {
+                    var newItems: [UserPreferences] = []
+                    for child in snapshot.children {
+                        if let snapshot = child as? DataSnapshot,
+                            let prefItem = UserPreferences(snapshot: snapshot) {
+                            newItems.append(prefItem)
+                        }
+                    }
+                    self.items = newItems
+                }
+                else {
+                    print("CameraViewController - There is no preference for the user in the db.")
+                }
+            })
         }
         
         setupDevice()
@@ -91,10 +113,10 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         DispatchQueue.main.async {
             self.captureSession.stopRunning()
         }
-        super.viewDidDisappear(animated)
     }
     
     func setupDevice() {
@@ -119,7 +141,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         do {
             setupCorrectFramerate(currentCamera: currentCamera!)
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
-            captureSession.sessionPreset = .photo
+            captureSession.sessionPreset = AVCaptureSession.Preset.photo
             // Get an instance of ACCapturePhotoOutput class
             capturePhotoOutput = AVCapturePhotoOutput()
             capturePhotoOutput?.isHighResolutionCaptureEnabled = true
@@ -193,21 +215,21 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             self.luminosityArray.append(luminosity)
             
             print(luminosity)
-//            if luminosity > 16.0 && !self.isTakePhoto && self.luminosityArray.count > 10 {
-//                // Waiting for 5 seconds in order to take photo with flash
-//                sleep(5)
-//                self.takePhoto(AnyClass.self)
-//                self.isTakePhoto = true
-//            }
+            if luminosity > 16.0 && !self.isTakePhoto && self.luminosityArray.count > 10 {
+                // Waiting for 5 seconds in order to take photo with flash
+                sleep(3)
+                self.takePhoto(AnyClass.self)
+                self.isTakePhoto = true
+            }
             let cgImage = self.context.createCGImage(cameraImage, from: self.imagePicked.frame)
             self.imagePicked.image = UIImage(cgImage: cgImage!)
         }
     }
     
-    func analyzePic(image: UIImage) {
+    func analyzePic(orgImage: UIImage) {
         let vision = Vision.vision()
         let textRecognizer = vision.onDeviceTextRecognizer()
-        let image = VisionImage(image: image)
+        let image = VisionImage(image: orgImage)
         
         textRecognizer.process(image) { result, error in
             guard error == nil, let result = result else {
@@ -217,10 +239,13 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             }
             //let resultText = result.text
             let mail: String = self.analyzeAndParseText(text: result.text.lowercased())
-            self.sendToDB(text: mail)
-            self.sendEmail(text: mail)
-            for block in result.blocks {
-                print(block.text)
+            if(!mail.isEmpty) {
+                let mailId = self.sendToDatabaseAndReturnID(image: orgImage, text: mail)
+                self.sendToStorage(image: orgImage, mailId: mailId)
+                self.sendEmail(text: mail)
+                for block in result.blocks {
+                    print(block.text)
+                }
             }
         }
     }
@@ -251,8 +276,6 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         sendOperation?.start { (error) -> Void in
             if (error != nil) {
                 NSLog("CameraViewController - Error sending email: \(error)")
-                
-                
             } else {
                 NSLog("CameraViewController - Successfully sent email!")
             }
@@ -260,34 +283,44 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func analyzeAndParseText(text: String) -> String {
-        if (text.contains("aok")) {
-            return "You have a new mail from AOK"
+        for pref in items {
+            if(text.contains(pref.sender.lowercased())) {
+                return "You have a new mail from \(pref.sender)"
+            }
         }
-        else if(text.contains("commerzbank")) {
-            return "You have a new mail from CommerzBank"
+        if(text.contains(user.name.lowercased())) {
+            return "You have a new mail from unknown sender"
         }
-        else if(text.contains("deutschebank")) {
-            return "You have a new mail from DeutscheBank"
-        }
-        else if(text.contains("ard") || text.contains("zdf")) {
-            return "You have a new mail from ARD ZDF"
-        }
-        else if(text.contains("kreisverwaltungsreferat")) {
-            return "You have a new mail from Kreisverwaltungsreferat"
-        }
-        else{
-            return "You have some shit in your postbox"
-        }
+        return ""
     }
     
-    func sendToDB(text: String) {
-        let mailItem = Mail(receiver: user.uid, text: text, checked: false)
-        let ref = db.reference(withPath: "users")
-        let userRef = ref.child(user.uid)
-        let mailItemRef = userRef.child("mails")
+    func sendToDatabaseAndReturnID(image: UIImage, text: String) -> String {
+        let mailItem = Mail(receiver: user.uid, text: text, checked: false, downloadUrl: "")
+        let mailItemRef = db.reference(withPath: "users").child(user.uid).child("mails")
         let details = mailItemRef.childByAutoId()
         details.setValue(mailItem.toAnyObject())
         isTakePhoto = false
+        return details.key!
+    }
+    
+    func sendToStorage(image: UIImage, mailId: String) {
+        let storageRef = storage.reference(withPath: "images").child(user.uid).child("\(mailId).jpg")
+        let uploadTask = storageRef.putData(image.jpegData(compressionQuality: 1.0)!, metadata: nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                //print("CameraViewController - An error occurred while sending photo to db.")
+                return
+            }
+            
+            storageRef.downloadURL { (url, error) in
+                guard let url = url else {
+                    //print("CameraViewController - An error occurred while creating a download url to photo.")
+                    return
+                }
+                print(url.absoluteString)
+                let mailItemRef = self.db.reference(withPath: "users").child(self.user.uid).child("mails").child(mailId)
+                mailItemRef.updateChildValues(["downloadUrl": url.absoluteString])
+            }
+        }
     }
     
 }
@@ -318,13 +351,8 @@ extension CameraViewController : AVCapturePhotoCaptureDelegate {
             // Save our captured image to photos album
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
-        analyzePic(image: capturedImage!)
-        //upload(image: capturedImage!)
-        
-        
+        analyzePic(orgImage: capturedImage!)
     }
-    
-    
 }
 
 extension UIInterfaceOrientation {

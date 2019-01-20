@@ -10,11 +10,8 @@ import Foundation
 import Firebase
 
 struct User {
-    
-    let ref = Database.database().reference(withPath: "users")
-    
     let uid: String
-    let name: String
+    var name: String
     let email: String
     
     init(authData: Firebase.User) {

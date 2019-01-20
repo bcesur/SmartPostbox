@@ -17,12 +17,14 @@ struct Mail {
     //Whole text without parsing for now
     let text: String!
     let checked: Bool
+    var downloadUrl: String!
     
-    init(receiver: String, text: String, checked: Bool) {
+    init(receiver: String, text: String, checked: Bool, downloadUrl: String) {
         self.ref = nil
         self.text = text
         self.receiver = receiver
         self.checked = checked
+        self.downloadUrl = downloadUrl
     }
     
     init?(snapshot: DataSnapshot) {
@@ -30,20 +32,23 @@ struct Mail {
             let value = snapshot.value as? [String: AnyObject],
             let receiver = value["receiver"] as? String,
             let text = value["text"] as? String,
-            let checked = value["checked"] as? Bool else {
+            let checked = value["checked"] as? Bool,
+            let downloadUrl = value["downloadUrl"] as? String else {
                 return nil
         }
         self.ref = snapshot.ref
         self.receiver = receiver
         self.text = text
         self.checked = checked
+        self.downloadUrl = downloadUrl
     }
     
     func toAnyObject() -> Any {
         return [
             "receiver": receiver,
             "text": text,
-            "checked": checked
+            "checked": checked,
+            "downloadUrl": downloadUrl
         ]
     }
     

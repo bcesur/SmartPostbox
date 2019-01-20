@@ -63,7 +63,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if user != nil {
                     //Print into the console if successfully logged in
                     print("You have successfully logged in")
-                    
                     self.performSegue(withIdentifier: self.loginToHome, sender: nil)
                     
                     

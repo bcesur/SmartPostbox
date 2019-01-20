@@ -10,7 +10,6 @@ target 'Smart Postbox' do
   pod 'Firebase/MLVision'
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
-  pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'mailcore2-ios'
   # If using an on-device API:
