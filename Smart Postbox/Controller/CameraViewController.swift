@@ -237,7 +237,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
                 self.isTakePhoto = false
                 return
             }
-            //let resultText = result.text
+            self.isTakePhoto = false
             let mail: String = self.analyzeAndParseText(text: result.text.lowercased())
             if(!mail.isEmpty) {
                 let mailId = self.sendToDatabaseAndReturnID(image: orgImage, text: mail)
@@ -285,13 +285,13 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     func analyzeAndParseText(text: String) -> String {
         for pref in items {
             if(text.contains(pref.sender.lowercased())) {
-                return "You have a new mail from \(pref.sender)"
+                return "You have a new mail from \(pref.sender)."
             }
         }
         if(text.contains(user.name.lowercased())) {
-            return "You have a new mail from unknown sender"
+            return "You have a new mail from unknown sender."
         }
-        return ""
+        return "You have an unknown mail!"
     }
     
     func sendToDatabaseAndReturnID(image: UIImage, text: String) -> String {
@@ -299,7 +299,6 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         let mailItemRef = db.reference(withPath: "users").child(user.uid).child("mails")
         let details = mailItemRef.childByAutoId()
         details.setValue(mailItem.toAnyObject())
-        isTakePhoto = false
         return details.key!
     }
     
@@ -351,6 +350,7 @@ extension CameraViewController : AVCapturePhotoCaptureDelegate {
             // Save our captured image to photos album
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
+        
         analyzePic(orgImage: capturedImage!)
     }
 }
