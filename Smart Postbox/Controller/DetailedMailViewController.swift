@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import Firebase
 
+let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .alert)
+
 class DetailedMailViewController: UIViewController {
     
     @IBOutlet weak var mailPicUIImageView: UIImageView!
@@ -17,7 +19,8 @@ class DetailedMailViewController: UIViewController {
     var user: User?
     var mail: Mail?
     let storage = Storage.storage()
-     let ref = Database.database().reference(withPath: "users")
+    let ref = Database.database().reference(withPath: "users")
+    //var alert: UIAlertController
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,13 @@ class DetailedMailViewController: UIViewController {
 
         }
         if (!(mail?.downloadUrl.isEmpty)!) {
+            let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
+            loadingIndicator.hidesWhenStopped = true
+            loadingIndicator.style = UIActivityIndicatorView.Style.gray
+            loadingIndicator.startAnimating();
+            
+            alert.view.addSubview(loadingIndicator)
+            present(alert, animated: true, completion: nil)
             mailPicUIImageView.loadImageUsingCacheWithUrlString((mail?.downloadUrl)!)
         } else {
             mailPicUIImageView.loadImageUsingCacheWithUrlString("https://firebasestorage.googleapis.com/v0/b/smartpostbox-fd86d.appspot.com/o/defaultErrorPic.jpg?alt=media&token=6cb201bd-d72b-4532-b0f2-49387daf177f")
@@ -75,7 +85,7 @@ extension UIImageView {
                     self.image = downloadedImage
                 }
             })
-            
+            alert.dismiss(animated: false, completion: nil)
         }).resume()
     }
     

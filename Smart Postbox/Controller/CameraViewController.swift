@@ -215,9 +215,9 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             self.luminosityArray.append(luminosity)
             
             print(luminosity)
-            if luminosity > 16.0 && !self.isTakePhoto && self.luminosityArray.count > 10 {
+            if luminosity > 10.0 && !self.isTakePhoto && self.luminosityArray.count > 10 {
                 // Waiting for 5 seconds in order to take photo with flash
-                sleep(3)
+                sleep(5)
                 self.takePhoto(AnyClass.self)
                 self.isTakePhoto = true
             }
