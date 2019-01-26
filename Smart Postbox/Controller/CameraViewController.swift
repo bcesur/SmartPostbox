@@ -215,7 +215,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             self.luminosityArray.append(luminosity)
             
             print(luminosity)
-            if luminosity > 10.0 && !self.isTakePhoto && self.luminosityArray.count > 10 {
+            if luminosity > 48.0 && !self.isTakePhoto && self.luminosityArray.count > 10 {
                 // Waiting for 5 seconds in order to take photo with flash
                 sleep(5)
                 self.takePhoto(AnyClass.self)
@@ -291,7 +291,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
         if(text.contains(user.name.lowercased())) {
             return "You have a new mail from unknown sender."
         }
-        return "You have an unknown mail!"
+        return "You have an unknown mail! It may not be relevant to you"
     }
     
     func sendToDatabaseAndReturnID(image: UIImage, text: String) -> String {
